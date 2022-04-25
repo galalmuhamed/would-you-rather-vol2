@@ -6,7 +6,12 @@ const Questions = () => {
 	const [selectNav, setSelectNav] = useState('Unanswered Questions');
 	return (
 		<>
-			<QuestionsNav selectNav={selectNav} setSelectNav={setSelectNav} />
+			<QuestionsNav
+				selectNav={selectNav}
+				setSelectNav={setSelectNav}
+				left={'Unanswered Questions'}
+				right={'Answered Questions'}
+			/>
 			{selectNav === 'Unanswered Questions' ? (
 				<FilterUnAnsweredQuestions selectNav={selectNav} />
 			) : (

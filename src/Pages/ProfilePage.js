@@ -154,7 +154,12 @@ const ProfilePage = () => {
 					setAge={setAge}
 				/>
 			)}
-			<QuestionsNav selectNav={selectNav} setSelectNav={setSelectNav} />
+			<QuestionsNav
+				selectNav={selectNav}
+				setSelectNav={setSelectNav}
+				left="Questions Created"
+				right="Answered Questions"
+			/>
 			{selectNav === 'Unanswered Questions' ? (
 				userQuestions.length > 0 ? (
 					sortedUserQuestion.map(id => (
